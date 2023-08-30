@@ -30,4 +30,4 @@ After I listed up essential pieces, I started sketching the pocket-sized fan wit
 ![sketch](/files/sketch.jpg){: style="display: block; margin: 0 auto;"width="230px" height="250px"}
 
 
-I'm not sure if this is how the future external pocket-sized fans will look like, but it's a start for now. Since I don't know all the sizes for different parts, I'll need to be flexible and change the design as I work on it with Fusion360.
+I'm not sure if this is how the future external pocket-sized fan will look like, but it's a start for now. Since I don't know all the sizes for different parts, I'll need to be flexible and change the design as I work on it with Fusion360.
