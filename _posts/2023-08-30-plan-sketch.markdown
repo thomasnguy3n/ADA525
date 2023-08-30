@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Assignment 00: Plan & Sketch"
-date:   2023-08-28 10:10:30 +0200
+date:   2023-08-30 10:10:30 +0200
 author: "TN"
 ---
 
