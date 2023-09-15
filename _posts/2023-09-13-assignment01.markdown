@@ -22,7 +22,7 @@ New ideas, new list for the project!
 
 A homemade pocket fan that goes beyond the standardized pocket fans you find on eBay or AliExpress. A pocket fan that will 100% cool you down. That's what we envisioned.
 
-![sketch.jpg](/files/pocket_fan.png){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+![CAD_pocket_fan.jpg](/files/pocket_fan.jpg){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
   <p>CAD of the pocket fan.</p>
