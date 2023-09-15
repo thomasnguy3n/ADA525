@@ -32,7 +32,7 @@ As you can see from the image, it has a relatively large fan for a PC fan, but w
 
 It also features an on/off button, but it won't function properly unless we incorporate a gesture control system. We want the fan to start spinning within a couple of seconds whenever we make a hand movement with the device. To achieve this, we need components such as an Arduino and a "motion/orientation controller" that will communicate with the Arduino to detect these movements. We'll also have to write some machine learning code to make it work.
 
-On the bottom of the fan, we plan to implement a "lunch box" top principle, allowing us to open the shell to install the necessary cables and replace the batteries. This idea was inspired by the Fusion360 - Lunch Box presentation we recently attended.
+On the bottom of the fan, I plan to implement a "lunch box" top principle, allowing us to open the shell to install the necessary cables and replace the batteries. This idea was inspired by the Fusion360 - Lunch Box presentation I recently attended.
 
 I haven't fully considered the breakdown of the parts yet, but once I receive the PC fan from Professor Frikk, I can begin conceptualizing the frame and assess whether it needs to be separate from the main body. I'll likely need to incorporate bearings throughout the 3D print.
 
