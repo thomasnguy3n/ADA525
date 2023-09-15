@@ -6,3 +6,34 @@ author: "TN"
 ---
 
 **CAD Final Project**
+
+After a brief discussion with my professor, Frikk Fossdal, I began to conceptualize the pocket fan project. We aimed to create a stylish and innovative pocket fan with some tech-savvy features.
+
+New ideas, new list for the project!
+
+- ***Battery***: Typical AA batteries. No need for a separate circuit board.
+- ***Fan Blades*** and Motor: Provided by Professor Frikk Fossdal (PC fan).
+- ***Switch***: Required for turning the fan on and off.
+- ***Arduino***: The central control unit for the pocket fan.
+- ***Motion/Orientation Controller***: A random chip to control device movement.
+- ***Wires & Connectors***: Necessary for connecting the motor, battery, and switch.
+- ***Fan Body***: A protective 3D-printed casing to enclose and secure components for safety.
+- ***Minor Parts***: Screws and glue may be needed for assembly.
+
+A homemade pocket fan that goes beyond the standardized pocket fans you find on eBay or AliExpress. A pocket fan that will 100% cool you down. That's what we envisioned.
+
+![sketch.jpg](/files/pocket_fan.png){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>CAD of the pocket fan.</p>
+</div>
+
+As you can see from the image, it has a relatively large fan for a PC fan, but who really cares? It's all about creating the best product. I just imported a standardized PC-fan online, but I will probably adjust the "head" if the original PC fan is different.
+
+It also features an on/off button, but it won't function properly unless we incorporate a gesture control system. We want the fan to start spinning within a couple of seconds whenever we make a hand movement with the device. To achieve this, we need components such as an Arduino and a "motion/orientation controller" that will communicate with the Arduino to detect these movements. We'll also have to write some machine learning code to make it work.
+
+On the bottom of the fan, we plan to implement a "lunch box" top principle, allowing us to open the shell to install the necessary cables and replace the batteries. This idea was inspired by the Fusion360 - Lunch Box presentation we recently attended.
+
+I haven't fully considered the breakdown of the parts yet, but once I receive the PC fan from Professor Frikk, I can begin conceptualizing the frame and assess whether it needs to be separate from the main body. I'll likely need to incorporate bearings throughout the 3D print.
+
+When I say 'we', I'm referring to Professor Frikk and myself.
