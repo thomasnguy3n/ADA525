@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Assignment 02: 3D print a design that combines multiple parts"
-date:   2023-09-13 10:33:30 +0200
+date:   2023-09-17 10:33:30 +0200
 author: "TN"
 ---
 
