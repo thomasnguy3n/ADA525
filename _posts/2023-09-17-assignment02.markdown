@@ -5,13 +5,93 @@ date:   2023-09-17 10:33:30 +0200
 author: "TN"
 ---
 
-**3D print a design that combines multiple parts**
+**Timeline of the assignment**
 
-![example_shelf.jpg](/files/example_shelf.jpg){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+![example_shelf.jpg](/files/example_shelf.jpg){: style="display: block; margin: 0 auto; width: 250px; height: 250px;"}
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
-  <p>Example of old school shelf and drawers</p>
+  <p>Example of an old-school shelf and drawers</p>
 </div>
 
-After having a bad experience with old-school shelves and drawers that had large square holes for the drawers, I found them immensely loose and unreliable. After watching a [YouTube video](https://www.youtube.com/watch?v=CQgpOVC5ZPc&ab_channel=OmegaFusion){:target="_blank"} about sliding joints, I came up with an idea where I could simply combine a shelf and a drawer into a bigger project.
+After having bad experiences with old-school shelves and drawers that had large square holes for the drawers, I found them immensely loose and unreliable. After watching a [YouTube video](https://www.youtube.com/watch?v=CQgpOVC5ZPc&ab_channel=OmegaFusion){:target="_blank"} about sliding joints, I came up with an idea where I could simply combine a shelf and a drawer into a bigger project.
 
+![shelf_vision.png](/files/shelf_vision.png){: style="display: block; margin: 0 auto; width: 300px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>CAD design of the envisioned drawer and shelf with a sliding mechanism</p>
+</div>
+
+![initial_design.png](/files/initial_design.png){: style="display: block; margin: 0 auto; width: 250px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Initial design of the sliding drawer</p>
+</div>
+
+With the image of the initial design in mind, I wanted to implement a drawer that could slide smoothly and stay in place while using it. Based on past experiences, when you pull an old-school shelf out, it tends to become unstable and lean downward due to gravity and poor support. By incorporating the sliding joints mechanism, we could prevent this issue and fully support the extended shelf. The initial design indicated that this concept would indeed work. Currently, it resembles a large block, but in the finished prototype, I will introduce space and extrusion to create a shelf.
+
+
+![3D_print.jpg](/files/3D_print.jpg){: style="display: block; margin: 0 auto; width: 250px; height: 300px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Snapshot of the first print</p>
+</div>
+
+![first_prototype.jpg](/files/first_prototype.jpg){: style="display: block; margin: 0 auto; width: 250px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>3D print of the first protype</p>
+</div>
+
+The first prototype was a massive failure, where I discovered many flaws in the initial design. First of all, there was the size of the print. It took around 6 hours in total to print those devices, which, in turn, was time-consuming and a waste of plastic for the sole purpose of researching and testing my hypothesis. Based on that experience, for future reference, I plan to initially print it in a smaller size and scale it up if necessary. I also learned to incorporate more spacing between the devices. There wasn't enough space to slide them together easily, and it required force to connect them. Based on this experience, I was prepared to begin sketching the second prototype.
+
+![second_prototype.jpg](/files/second_prototype.jpg){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>3D print of the second protype</p>
+</div>
+
+The second prototype represented a massive improvement. The initial 6-hour print time was reduced to just 30 minutes, and the sliding mechanism finally functioned after adding more spacing between the devices. However, through testing, I discovered some flaws that could potentially limit the shelf's lifespan. When looking at the second prototype, markers indicated potential weaknesses in the shelf when weight was applied. I realized that I needed to incorporate more surface area to support the future weight of items placed on the shelf, or else the marked areas would break with minimal usage.
+
+![third_prototype.jpg](/files/third_prototype.jpg){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>3D print of the third protype</p>
+</div>
+
+The third prototype addressed the surface problem, but I noticed there was wasted space on the bottom part. While the sliding mechanism worked well, I realized I could shorten it to create more room for the shelf. By not making this improvement, it could potentially impact the height of the drawer and shelf or reduce the available space inside the shelf when fully designed.
+
+![all_prototypes.jpg](/files/all_prototypes.jpg){: style="display: block; margin: 0 auto; width: 300px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>3D print of all the protypes</p>
+</div>
+
+Finally, I created a prototype that I am satisfied with. Now, it slides smoothly, is supported by a large flat surface, and doesn't occupy unnecessary space, which can now be utilized for storage. I can simply add the walls and roof to the bottom part, and extrude space on the top part to create a drawer and shelf with a simple sliding mechanism.
+
+I wasn't able to 3D print the final prototype, which included the walls, roof, and shelf extrusion, due to time constraints. I had to catch a flight from Bergen to Oslo on Friday morning to participate in the Oslo Marathon. Considering that, my limited access to 3D printers and the 3D print room, I simply didn't have enough time to complete the finishing touches.
+
+![desk_organizer.png](/files/desk_organizer.png){: style="display: block; margin: 0 auto; width: 300px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Side project; A desk organizer with drawer and shelf</p>
+</div>
+
+I am aiming to wrap up this little side project in a couple of weeks. This DIY desk organizer comes with a drawer, a shelf, spots for storing pens and pencils, and even a phone holder. I haven't quite finished designing it, and I am excited to add some cool features to make it look even better. This is a fun way for me to get better at CAD and 3D printing.
+
+**Technicality of the design and 3D print**
+
+After testing and experiencing some initial failures with Fusion360 while designing the first prototypes, I learned a few techniques that improved my approach to working with the software. One important lesson was the use of custom parameters for design, allowing me to scale the design effortlessly, provided I established appropriate constraints. Additionally, I discovered the mirror function, which not only ensured symmetry in my prototypes but also significantly sped up my workflow.
+
+![settings.png](/files/settings.png){: style="display: block; margin: 0 auto; width: 250px; height: 300px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Strength settings</p>
+</div>
+
+Considering they were only prototypes, it wasn't necessary to implement all the required features during the slicing phase due to printing time constraints. I used the standard settings for the print, which included a 0.2 mm layer height. If I was printing the final prototype, which was scaled up and included walls and a roof, I would strengthen the prototype by adding more layers, increasing the initial layer height, and using a honeycomb surface pattern to reinforce the shelf's surface.
+
+If I were to print the drawer with walls and roofs in the typical orientation, I would likely need to use supports when printing the roof. However, by rotating the design on Bambu by 90 degrees, with the back of the drawer on the bottom, I wouldn't need to implement supports for the roof.
+
+Print time wasn't a primary consideration for settings of the final prototype because I aimed for a drawer and shelf that are actually durable, rather than compromising on strength and lifespan due to concerns about plastic usage and print time.
+
+***The images might not display due to instability with the Github hosting. They work perfectly when run locally but are occasionally  online. Please let me know if you'd like to see the website running from my computer.***

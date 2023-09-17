@@ -37,3 +37,5 @@ On the bottom of the fan, I plan to implement a "lunch box" top principle, allow
 I haven't fully considered the breakdown of the parts yet, but once I receive the PC fan from Professor Frikk, I can begin conceptualizing the frame and assess whether it needs to be separate from the main body. I'll likely need to incorporate bearings throughout the 3D print.
 
 When I say 'we', I'm referring to Professor Frikk and myself.
+
+***The images might not display due to instability with the Github hosting. They work perfectly when run locally but are occasionally  online. Please let me know if you'd like to see the website running from my computer.***
