@@ -94,4 +94,4 @@ If I were to print the drawer with walls and roofs in the typical orientation, I
 
 Print time wasn't a primary consideration for settings of the final prototype because I aimed for a drawer and shelf that are actually durable, rather than compromising on strength and lifespan due to concerns about plastic usage and print time.
 
-***The images might not display due to instability with the Github hosting. They work perfectly when run locally but are occasionally  online. Please let me know if you'd like to see the website running from my computer.***
+***The images might not display due to instability with the Github hosting. They work perfectly when run locally but only occasionally  online. Please let me know if you'd like to see the website running from my computer.***

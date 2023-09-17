@@ -12,4 +12,4 @@ I'm an outdoorsy enthusiast who thrives on exploring new experiences. Over the p
 
 This website serves as a platform for documenting and sharing 'blog-ish' content about my projects and constructions related to the [ADA525](https://www.hvl.no/en/studies-at-hvl/study-programmes/courses/2023/ADA525) course. I'm pretty new when it comes to 3D printing, laser cutting, electronics, circuit fabrication and that kind of stuff, but bear with me. This is going to be fun!
 
-***The images might not display due to instability with the Github hosting. They work perfectly when run locally but are occasionally  online. Please let me know if you'd like to see the website running from my computer.***
+***The images might not display due to instability with the Github hosting. They work perfectly when run locally but only occasionally  online. Please let me know if you'd like to see the website running from my computer.***

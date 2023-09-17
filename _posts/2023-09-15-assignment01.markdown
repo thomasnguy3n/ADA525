@@ -38,4 +38,4 @@ I haven't fully considered the breakdown of the parts yet, but once I receive th
 
 When I say 'we', I'm referring to Professor Frikk and myself.
 
-***The images might not display due to instability with the Github hosting. They work perfectly when run locally but are occasionally  online. Please let me know if you'd like to see the website running from my computer.***
+***The images might not display due to instability with the Github hosting. They work perfectly when run locally but only occasionally  online. Please let me know if you'd like to see the website running from my computer.***
