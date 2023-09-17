@@ -7,4 +7,11 @@ author: "TN"
 
 **3D print a design that combines multiple parts**
 
-After seeing the professors 
+![example_shelf.jpg](/files/example_shelf.jpg){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Example of old school shelf and drawers</p>
+</div>
+
+After having a bad experience with old-school shelves and drawers that had large square holes for the drawers, I found them immensely loose and unreliable. After watching a [YouTube video](https://www.youtube.com/watch?v=CQgpOVC5ZPc&ab_channel=OmegaFusion){:target="_blank"} about sliding joints, I came up with an idea where I could simply combine a shelf and a drawer into a bigger project.
+
