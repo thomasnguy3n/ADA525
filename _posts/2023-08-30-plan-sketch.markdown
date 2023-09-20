@@ -27,7 +27,7 @@ I needed to start small. I began listing up essential parts that I thought of fo
 
 After I listed up essential pieces, I started sketching the pocket-sized fan with pen and paper, envisioning how I wanted it to look like. After making a series of small improvements, this is what I ultimately came up with.
 
-![sketch.jpg](/files/sketch.jpg){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+![sketch](https://github.com/thomasnguy3n/ADA525/assets/142970936/0ba3d3b3-2457-40f6-8e57-5a4787aeae30){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
   <p>2D sketch of the prototype.</p>
