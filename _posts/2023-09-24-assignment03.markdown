@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Assignment 03: Laser cutting"
+date:   2023-09-24 22:33:30 +0200
+author: "TN"
+---
+
+**Timeline of the assignment**
+
+After a lot of practice with Fusion360, I finally managed to design a finger-joint box.
+
+I began by designing its base, aligning the finger-joint parts, and extruding it. Then I worked on the short sides, creating projections and squares, and extruding that section as well. Afterward, I mirrored the component to the other side. I repeated the same process with the long sides, using the software's combine function for extrusion. I also utilized the parameters to maintain consistency with the adjustments. If I needed to make changes, they would affect the entire sketch, not just one part.
+
+![fingerjointbox](https://github.com/thomasnguy3n/ADA525/assets/142970936/94f7965e-67b4-4513-8329-1d9e5cdd2e80){: style="display: block; margin: 0 auto; width: 400px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>CAD design of the finger-joint box</p>
+</div>
+
+ADD LASER CUTTING STEPS HERE
+
+**Reflection on lasercutting**
+
+Laser cutting is a widely used technology in engineering that excels at precisely slicing materials into perfect pieces. This precision is invaluable, especially when working on projects that require intricate designs and precise measurements. Laser cutters operate significantly faster than 3D printing, enabling rapid prototyping and iteration, which is essential for my project. This quick turnaround allows me to save time while maintaining high-quality output.
+
+There are several ways I can leverage laser cutting for my final project. I can use it to engrave unique designs or patterns onto my pocket-sized fan, giving it a distinctive and eye-catching appearance. Additionally, laser cutting is ideal for creating precise holes for buttons, switches, and ventilation. This technology offers a unique opportunity to elevate the final project to a new level of craftsmanship and aesthetics.
