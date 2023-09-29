@@ -17,7 +17,30 @@ I began by designing its base, aligning the finger-joint parts, and extruding it
   <p>CAD design of the finger-joint box</p>
 </div>
 
-ADD LASER CUTTING STEPS HERE
+I put the offset on the whole design by 0.0125 to compensate for the underprecision by the laser.
+
+![pieces](https://github.com/thomasnguy3n/ADA525/assets/142970936/fab3321f-cff6-4e16-b769-3eb9fd463405){: style="display: block; margin: 0 auto; width: 400px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Pieces of the finger-joint box</p>
+</div>
+
+With the help of Max, we lasercut all the necessary pieces to fit them all.
+
+![box_without_roof](https://github.com/thomasnguy3n/ADA525/assets/142970936/853ac003-2900-44fd-a7ab-8b0da674f3c3){: style="display: block; margin: 0 auto; width: 400px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Finger-joint box without roof</p>
+</div>
+
+
+![Assembled_box](https://github.com/thomasnguy3n/ADA525/assets/142970936/3983ea80-3cb1-4ba4-9feb-55d1f69bfe88){: style="display: block; margin: 0 auto; width: 400px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Assembled box</p>
+</div>
+
+One thing I would improve with this design is to lower the offset. It is good enough to assemble, but it doesn't stick that well because of my offset. If I lowered, or even removed the offset, it could probably fit better.
 
 **Reflection on lasercutting**
 
