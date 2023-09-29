@@ -40,7 +40,7 @@ With the help of Max, we lasercut all the necessary pieces to fit them all.
   <p>Assembled box</p>
 </div>
 
-There are two things I would improve on with this design. The first one is to lower the offset. It is good enough to assemble, but it doesn't stick that well because of my offset. If I lowered, or even removed the offset, it could probably fit better. The second one is to redesign the whole sketch on CAD, where I just have 6 pieces of one design. Now I have 4 different designs.
+There are two things I would improve on with this design. The first one is to lower the offset. It is good enough to assemble, but it doesn't stick that well because of my offset. If I lowered, or even removed the offset, it could probably fit better. The second one is to redesign the whole sketch on CAD, where I just have 6 pieces of one design. Now I have 6 different pieces of 4 different designs.
 
 **Reflection on lasercutting**
 
