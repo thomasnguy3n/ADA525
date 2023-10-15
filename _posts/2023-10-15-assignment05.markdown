@@ -105,4 +105,26 @@ The design of the third iteration brought me a great deal of satisfaction as it 
   <p>Third iteration of the pieces together.</p>
 </div>
 
-***Summary***
+I intentionally printed the cylindrical part with a shorter design to conserve time and reduce plastic usage. In the process, I removed the corner holes and added side pockets to facilitate disassembly. I made adjustments to all parts to achieve these improvements.
+
+The third iteration of the prototype was a resounding success. I managed to find effective ways to integrate the cylindrical body into the fan's structure, and I made progress in simplifying the assembly process for the fan body. 
+Visualizing the further development and improvement of the design allowed me to contemplate how I could provide better protection for the electrical components and shape the cylindrical body in a more effective manner.
+
+***What is next***
+
+In the second prototype, my primary focus will be on shaping the body of the cylindrical form. I aim to craft a design that is not only original but also boasts a smooth and user-friendly feel. The first prototype has too many rough edges and lacks a sleek finish. My goal is to develop an intuitive body that not only looks fantastic but also feels comfortable to hold. 
+
+Additionally, I'm eager to enhance the connection between the top fan body and the cylindrical body. Presently, the fit is snug, but there's room for improvement, as the components can inadvertently slide sideways or out of the fan body. My plan is to explore sliding lock mechanisms as a means of achieving a secure connection, eliminating the need for screws in the process.
+
+In the second prototype, I'll also pay attention to establishing connections for the electrical components to ensure the proper functioning of all parts. Additionally, I'll delve into coding for the Arduino component, with the aim of making the pocket fan interactive.
+
+Professor Frikk has mentioned the potential for altering the PC fan or adding an electrical booster, which implies that the current prototype is somewhat fragile. Nevertheless, the process of prototyping the initial design has provided me with invaluable insights and knowledge that I can apply to introduce new changes. Incorporating fresh concepts into future projects is particularly valuable in advancing my skills and innovations.
+
+
+I decided to forego the idea of a cylindrical shape on the bottom side as it posed potential challenges for effective air circulation and airflow for the fan.
+
+![Failed prototype](https://github.com/thomasnguy3n/ADA525/assets/142970936/1ddb621c-6930-49e2-bd48-15807953271e){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>CAD of the failed prototype.</p>
+</div>
