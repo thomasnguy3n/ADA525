@@ -77,14 +77,32 @@ The pieces now fit perfectly. However, there are a couple of aspects I intend to
 
 I experimented with CAD, specifically Fusion 360, to explore ways to incorporate the cylindrical body into the fan's design. While contemplating the integration of other electrical components like the Arduino and battery, my primary emphasis remained on successfully incorporating the cylindrical body into the fan's overall design. I eventually arrived at a design that I could begin visualizing and further refine, paving the way for potential enhancements to this new design.
 
+![Third iteration of the top shell part.](https://github.com/thomasnguy3n/ADA525/assets/142970936/c44a4519-974f-4229-b1a9-2a0b226073f3){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Third iteration of the top shell part.</p>
+</div>
+
+![Second iteration of the bottom shell part.](https://github.com/thomasnguy3n/ADA525/assets/142970936/90edc017-f4ee-4d3a-be03-b2787f0a5608){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Second iteration of the bottom shell part. Notice the pocket on the sides.</p>
+</div>
+
 ![Third iteration of the top part.](https://github.com/thomasnguy3n/ADA525/assets/142970936/f6783c38-a499-4de5-a00c-c2470234aec3){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
-  <p>Third iteration of the top part.</p>
+  <p>Third iteration of the combined top part.</p>
 </div>
 
-![Second iteration of the bottom part.](https://github.com/thomasnguy3n/ADA525/assets/142970936/90edc017-f4ee-4d3a-be03-b2787f0a5608){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+The design of the third iteration brought me a great deal of satisfaction as it began to resemble the final product I have envisioned. I feel like I'm getting closer to my goal!
+
+![393132007_224072220687173_4269818093756611625_n](https://github.com/thomasnguy3n/ADA525/assets/142970936/d7d34fd7-5286-44ea-b064-25f39b7c0857){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+![393305891_1523079831832211_8955165690615465569_n](https://github.com/thomasnguy3n/ADA525/assets/142970936/22f9c856-d9cf-4065-8bfa-fda1883e48a0){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
-  <p>Second iteration of the bottom part.</p>
+  <p>Third iteration of the pieces together.</p>
 </div>
+
+***Summary***
