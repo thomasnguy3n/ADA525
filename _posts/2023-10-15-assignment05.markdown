@@ -5,8 +5,8 @@ date:   2023-10-15 10:33:30 +0200
 author: "TN"
 ---
 
-**PROTOTYPE 01**
 ***Introduction***
+
 After receiving Arduino components, a fan, and a battery, I began working on designing and prototyping a potential fan. I decided to deviate from my initial design in search of something more distinctive and original.
 
 ![pocket_fan](https://github.com/thomasnguy3n/ADA525/assets/142970936/1ab0baad-05bb-4ce5-b140-65006546bd8f){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
@@ -21,6 +21,8 @@ The fan can be positioned either in the middle or at the bottom of the cylinder-
 
 Before deciding where to put the fan, I wanted to figure out how the fan's parts could be separated. This way, I could make changes more easily and save time instead of having to print the entire body if I wasn't happy with the design. It seemed like a practical and time-saving approach.
 
+***First Iteration***
+
 I started designing the body to fit the PC fan, which had a size of 70x70 millimeters.
 
 ![Body around the fan](https://github.com/thomasnguy3n/ADA525/assets/142970936/234cae1c-b64e-415e-8a3a-5fe5b98dd7f5){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
@@ -30,4 +32,46 @@ I started designing the body to fit the PC fan, which had a size of 70x70 millim
 </div>
 
 I added a hole in the corner of the design for the fan cables to pass through. However, when I printed and assembled the part, I soon realized that the hole was too small for the wires to fit through. I had to make adjustments and come up with a solution to thread the wires. The hole was also on the wrong side because the actual fan didn't match the one I had uploaded online.
+
+![Top side - First prototype of the top part of the fan shell](https://github.com/thomasnguy3n/ADA525/assets/142970936/458f21f7-e16c-43bc-916e-308fac8b09d7){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Top side - First prototype of the fan shell.</p>
+</div>
+
+![Shell without fan](https://github.com/thomasnguy3n/ADA525/assets/142970936/74bb3e90-53fd-4ebd-ba68-950b212f3a18){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Shell without fan.</p>
+</div>
+
+As you can see, there is an issue with the wires not aligning with the holes I initially designed in both the top and bottom parts. Additionally, the walls around the fan turned out to be too thin and quite flexible, so I planned to make them thicker for added stability. Given these challenges, I decided to iterate on the design for the top part and create a new component for the bottom part.
+
+***Second Iteration***
+
+I reworked the top shell part to address the challenges encountered in the first iteration. Additionally, I crafted the design for the bottom part of the shell.
+
+![Redesign of the top part](https://github.com/thomasnguy3n/ADA525/assets/142970936/b301c58a-8d76-4d91-b13b-5cc877b83663){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Redesign of the top part.</p>
+</div>
+
+As you can see in the image, I expanded the hole space and created a dedicated path for the fan wires.
+
+![Top and bottom part combined](https://github.com/thomasnguy3n/ADA525/assets/142970936/fcb229a9-fcee-40ef-8da0-49717acdab9a){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Top and bottom part combined.</p>
+</div>
+
+![3D print - Parts combined](https://github.com/thomasnguy3n/ADA525/assets/142970936/ae26fde6-16a8-4cea-b056-4cc9d6679602){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Parts combined.</p>
+</div>
+
+The pieces now fit perfectly. However, there are a couple of aspects I intend to modify in the design. Firstly, I plan to remove or adjust the corner holes initially intended for screws. Secondly, I aim to devise a mechanism that facilitates the disassembly of the components, as currently, they are quite challenging to separate. For the next iteration, my focus will be on addressing these challenges and proceeding with the creation of the cylindrical-shaped body to direct the airflow.
+
+***Third Iteration***
 
