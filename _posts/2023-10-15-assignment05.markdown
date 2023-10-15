@@ -6,4 +6,28 @@ author: "TN"
 ---
 
 **PROTOTYPE 01**
+***Introduction***
+After receiving Arduino components, a fan, and a battery, I began working on designing and prototyping a potential fan. I decided to deviate from my initial design in search of something more distinctive and original.
+
+![pocket_fan](https://github.com/thomasnguy3n/ADA525/assets/142970936/1ab0baad-05bb-4ce5-b140-65006546bd8f){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>CAD of the original fan.</p>
+</div>
+
+At this point, I've started exploring alternative designs and shapes for the new fan, with the goal of achieving a sleek, cylindrical form. 
+
+The fan can be positioned either in the middle or at the bottom of the cylinder-shaped structure. Placing it in the middle might pose a challenge in terms of generating sufficient airflow through the fan.
+
+Before deciding where to put the fan, I wanted to figure out how the fan's parts could be separated. This way, I could make changes more easily and save time instead of having to print the entire body if I wasn't happy with the design. It seemed like a practical and time-saving approach.
+
+I started designing the body to fit the PC fan, which had a size of 70x70 millimeters.
+
+![Body around the fan](https://github.com/thomasnguy3n/ADA525/assets/142970936/234cae1c-b64e-415e-8a3a-5fe5b98dd7f5){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>First design of the body around the fan.</p>
+</div>
+
+I added a hole in the corner of the design for the fan cables to pass through. However, when I printed and assembled the part, I soon realized that the hole was too small for the wires to fit through. I had to make adjustments and come up with a solution to thread the wires. The hole was also on the wrong side because the actual fan didn't match the one I had uploaded online.
 
