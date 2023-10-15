@@ -75,3 +75,16 @@ The pieces now fit perfectly. However, there are a couple of aspects I intend to
 
 ***Third Iteration***
 
+I experimented with CAD, specifically Fusion 360, to explore ways to incorporate the cylindrical body into the fan's design. While contemplating the integration of other electrical components like the Arduino and battery, my primary emphasis remained on successfully incorporating the cylindrical body into the fan's overall design. I eventually arrived at a design that I could begin visualizing and further refine, paving the way for potential enhancements to this new design.
+
+![Third iteration of the top part.](https://github.com/thomasnguy3n/ADA525/assets/142970936/f6783c38-a499-4de5-a00c-c2470234aec3){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Third iteration of the top part.</p>
+</div>
+
+![Second iteration of the bottom part.](https://github.com/thomasnguy3n/ADA525/assets/142970936/90edc017-f4ee-4d3a-be03-b2787f0a5608){: style="display: block; margin: 0 auto; width: 230px; height: 250px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <p>Second iteration of the bottom part.</p>
+</div>
