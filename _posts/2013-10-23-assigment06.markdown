@@ -124,8 +124,86 @@ Y: 6.69
 Z: 1.71
 ```{% endraw %}
 
-Whenever I moved the Arduino that was connected to the device while it was running, new data appeared on the terminal. This data provided information on how the gyroscope sensor readings in the X, Y, and Z axes changed over time.
+Whenever I moved the Arduino that was connected to the device while it was running, new data appeared on the terminal. This data provided information on how the gyroscope sensor readings in the X, Y, and Z axes changed over time. I used Visual Studio Code as my IDE for this project. If I had used the Arduino IDE, I could have visualized the data in readable graphs.
 
 The light was briefly activated every time I moved the Arduino, which indicated the success of this task.
 
 ![Your GIF Alt Text](https://im2.ezgif.com/tmp/ezgif-2-945f6a7bd6.gif){: style="display: block; margin: 0 auto; width: 300px; height: 350px;"}
+
+***What's next***
+
+As mentioned earlier, this assignment holds significant value for my final project involving the Arduino, especially in regard to the gyroscope. I can apply the concepts learned from this exercise to the fan project and make necessary adjustments to the code.
+
+In my final project, my goal is to activate the fan by moving or shaking it, causing it to blow for a few seconds before gradually turning off unless it is shaken once more. Consequently, I wanted to further experiment with this concept using lights to determine its feasibility with the tools currently at my disposal.
+
+{% raw %}```C++
+//Code in C++
+#include <Arduino.h>
+#include <Arduino_LSM6DS3.h>
+#include <Adafruit_BMP280.h>
+
+unsigned long prevMillis;
+const int timeInterval = 500;
+float x, y, z;
+float prevX, prevY, prevZ;
+int lampPin = A0;
+bool lampActive = false;
+
+void setup() {
+  Serial.begin(9600);
+  IMU.begin();
+  pinMode(lampPin, OUTPUT);
+  digitalWrite(lampPin, LOW); // Ensure the lamp is initially off.
+}
+
+void loop() {
+  IMU.readGyroscope(x, y, z);
+  x = x - 4;
+  y = y + 4.8;
+  z = z + 2.75;
+
+  unsigned long currentMillis = millis();
+
+  if (currentMillis - prevMillis > timeInterval) {
+    Serial.print("X: ");
+    Serial.println(x);
+    Serial.print("Y: ");
+    Serial.println(y);
+    Serial.print("Z: ");
+    Serial.println(z);
+
+    prevMillis = currentMillis;
+  }
+
+  int changeX = abs(x - prevX);
+  int changeY = abs(y - prevY);
+  int changeZ = abs(z - prevZ);
+
+  if (changeX > 100 || changeY > 100 || changeZ > 100) {
+    if (!lampActive) {
+      // Turn on the lamp.
+      digitalWrite(lampPin, HIGH);
+      lampActive = true;
+      delay(10000); // Keep the lamp on for 10 seconds.
+      digitalWrite(lampPin, LOW); // Turn off the lamp after 10 seconds.
+      lampActive = false;
+    }
+  }
+  
+  // Update the previous gyroscope data.
+  prevX = x;
+  prevY = y;
+  prevZ = z;
+}
+```{% endraw %}
+
+With this code, the light will remain activated for 10 seconds unless I make additional movements, which will extend its activation. This demonstrates the practical use of the gyroscope in my project, which I plan to fully implement.
+
+My next focus is to gain a better understanding of the data I receive from the gyroscope sensor readings. The terminal continuously displays new numbers when I move the Arduino, and the light activates with even the slightest movement. I aim to comprehend the data more thoroughly, allowing me to fine-tune the code and make the light less sensitive, requiring more significant movements or shakes to activate.
+
+I need to discuss further with professor Frikk regarding the power requirements and the parts needed for my project. I have no previous experience with power, volts, or whatsoever, so I need extra follow-up to make sure that I don't burn or destroy the Arduino.
+
+***Sources***
+
+- [Adafruit nRF52840](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/overview)
+- [Arduino Tutorial](https://www.youtube.com/watch?v=nL34zDTPkcs&t=365s&ab_channel=Afrotechmods)
