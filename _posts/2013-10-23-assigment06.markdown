@@ -4,3 +4,86 @@ title: "Assignment 06: Input & Output"
 date:   2023-10-23 10:33:30 +0200
 author: "TN"
 ---
+
+***Introduction***
+
+During this week's assignment, we were all handed Arduinos and had a session on how to work with this kind of technology, as well as how to read and adjust their sensors and mechanisms by coding in C++.
+
+With this assignment in mind, we aimed to use the Arduino to measure a value and provide an output of the result.
+
+***Work History***
+
+I started researching the *Adafruit Feather Bluefruit Sense - nRF52840*, an Arduino board, to the extent of understanding its properties and mechanics. This Arduino is an all-in-one chip that includes components such as a gyroscope and accelerometer, which can measure temperature and movement values. This Arduino is a perfect fit for my final project where I need to move or shake the fan to make it blow.
+
+I used this code to make the Arduino detect movement and activate a light when movement is sensed.
+
+{% raw %}```C++
+#include <Arduino.h>
+#include <Arduino_LSM6DS3.h>
+#include <Adafruit_BMP280.h>
+
+unsigned long prevMillis;
+const int timeInterval = 500;
+float x, y, z;
+float xs = 0, ys = 0, zs = 0;
+float prevX, prevY, prevZ;
+int counter = 0;
+
+void setup() {
+  // Initialize serial communication at a baud rate of 9600.
+  Serial.begin(9600);
+
+  // Initialize the LSM6DS3 sensor.
+  IMU.begin();
+
+  // Configure pin A0 as an output for analog write.
+  pinMode(A0, OUTPUT);
+}
+
+void loop() {
+  // Read gyroscope data into the variables x, y, and z.
+  IMU.readGyroscope(x, y, z);
+
+  // Adjust the gyroscope data values.
+  x = x - 4;
+  y = y + 4.8;
+  z = z + 2.75;
+
+  // Measure the current time in milliseconds.
+  unsigned long currentMillis = millis();
+
+  // Check if it's time to print the gyroscope data.
+  if (currentMillis - prevMillis > timeInterval) {
+    Serial.print("X: ");
+    Serial.println(x);
+    Serial.print("Y: ");
+    Serial.println(y);
+    Serial.print("Z: ");
+    Serial.println(z);
+
+    // Update prevMillis with the current time.
+    prevMillis = currentMillis;
+  }
+
+  // Calculate the absolute differences between current and previous gyroscope data.
+  int changeX = abs(x - prevX);
+  int changeY = abs(y - prevY);
+  int changeZ = abs(z - prevZ);
+
+  // Check if any of the differences are greater than 100.
+  if (changeX > 100 || changeY > 100 || changeZ > 100) {
+    // Turn on an external component (e.g., a motor or LED) connected to pin A0.
+    analogWrite(A0, 1023);
+    delay(1000); // Wait for 1 second.
+  } else {
+    // Turn off the external component by setting the analog output to 0.
+    analogWrite(A0, 0);
+  }
+}
+```{% endraw %}
+
+#ADD SOURCE FOR THE CODE?
+
+I encountered a major issue while running the code and attempting to upload it to the Arduino. It took me a considerable amount of time to identify the mistake, which was the reason my code wasn't fully executing when uploading it to the Arduino. Initially, I had designated the *Adafruit Feather Bluefruit Sense* as my main board when creating a new project for this assignment. This choice was entirely incorrect, and I only realized it when I switched to the *Adafruit Feather nRF52840 Express*. After making this change, everything worked perfectly fine.
+
+***Result***
