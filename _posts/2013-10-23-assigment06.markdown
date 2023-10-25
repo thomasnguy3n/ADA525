@@ -128,7 +128,7 @@ Whenever I moved the Arduino that was connected to the device while it was runni
 
 The light was briefly activated every time I moved the Arduino, which indicated the success of this task.
 
-![Your GIF Alt Text](https://im2.ezgif.com/tmp/ezgif-2-945f6a7bd6.gif){: style="display: block; margin: 0 auto; width: 300px; height: 350px;"}
+![Video of the Arduino](https://github.com/thomasnguy3n/ADA525/assets/142970936/22c7eba6-7a12-43dc-ac1f-5bcb96af7063){: style="display: block; margin: 0 auto; width: 300px; height: 350px;"}
 
 ***What's next***
 
