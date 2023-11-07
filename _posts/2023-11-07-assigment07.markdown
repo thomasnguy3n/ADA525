@@ -4,3 +4,120 @@ title: "Assignment 07: Web Server 1"
 date:   2023-11-07 10:33:30 +0200
 author: "TN"
 ---
+
+***Introduction***
+
+When I initially began this project, I started by reading the documentation for the various packages I was planning to use. This included ExpressJS and ChartJS. Although I had previous experience with other frameworks like ReactJS and Django, I had no prior experience with NodeJS. I saw this as a fresh opportunity to learn and become familiar with a new framework.
+
+At first, I wanted to use real-time data that was constantly updated, but I realized that it was more complex than the initial task required. I quickly understood that I would have to work with APIs and other components, which were too complicated for the assignment. Therefore, I decided to use a random number generator that would produce a new number every 5 seconds.
+
+***Project Steps***
+
+I started building this web server in a designated folder, and initialized nodeJS project and downloaded the neccessary packages for the project.
+
+{% raw %}```Terminal
+npm init -y
+```{% endraw %}
+
+{% raw %}```Terminal
+npm install express chart.js
+```{% endraw %}
+
+After the necessary packages were downloaded, the required coding files had to be created with the correct project structure.
+
+A html file had to be created - *index.html*
+
+{% raw %}```HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Data Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <canvas id="data-chart"></canvas>
+    <script src="/client.js"></script>
+</body>
+</html>
+```{% endraw %}
+
+The same with a javascript file - *client.js*
+
+{% raw %}```Javascript
+const dataURL = '/data';
+const ctx = document.getElementById('data-chart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Assignment 07: Web Server 1 - Real-time Data',
+            data: [],
+            borderColor: 'rgb(75, 192, 192)',
+            borderWidth: 1,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                min: 0,     // Set the minimum value of the y-axis
+                max: 100,   // Set the maximum value of the y-axis
+                ticks: {
+                    stepSize: 10, // Set the step size between ticks
+                },
+            },
+            x: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+
+function fetchDataAndVisualize() {
+    fetch(dataURL)
+        .then(response => response.json())
+        .then(data => {
+            chart.data.labels.push(new Date().toLocaleTimeString());
+            chart.data.datasets[0].data.push(data.value);
+
+            if (chart.data.labels.length > 10) {
+                chart.data.labels.shift();
+                chart.data.datasets[0].data.shift();
+            }
+
+            chart.update();
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+
+fetchDataAndVisualize();
+setInterval(fetchDataAndVisualize, 5000);
+```{% endraw %}
+
+And finally, a file to run the server - *server.js*
+
+{% raw %}```Javascript
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(express.static('public'));
+
+app.get('/data', (req, res) => {
+    const randomValue = Math.floor(Math.random() * 100);
+    res.json({ value: randomValue });
+});
+
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
+```{% endraw %}
+
+***Results***
+
