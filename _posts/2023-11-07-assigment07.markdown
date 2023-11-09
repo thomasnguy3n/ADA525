@@ -129,6 +129,12 @@ The end result is a web server with a chart that updates every 5 seconds. The Y-
   <p>Screenshot of the updating chart</p>
 </div>
 
+The thought process behind the design is quite simple. I wanted a plain and minimalistic design with no drastic colors. Therefore I went with the colors blue and grey. I could have extended the Y-axis into something more or less than a 100, but since I had the Math.function() in between 0 and 100, I needed the Y-axis to be at least 100.
+
+I could have chosen another chart instead of the line-chart, for instance a bar chart, but I went with the simple and basic one, mainly because of time constraint and more focus on the final project.
+
 ***Next***
 
-I wanted to learn more about the p5JS and how I could implement this library into the code that I've already written. 
+I can implement this technology into my final project by creating a web server that shows a chart of the movements of the fan. With this, I can analyze the data coming from the Arduino, but also for the aesthetics.
+
+I will see what I will come up with for the next assignment.
