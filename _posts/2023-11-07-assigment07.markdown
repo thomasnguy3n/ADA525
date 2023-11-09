@@ -121,3 +121,14 @@ app.listen(port, () => {
 
 ***Results***
 
+The end result is a web server with a chart that updates every 5 seconds. The Y-axis consist of values from the Math.random() function while the X-axis consist of the timestamp. I had trouble at the beginning of my code when I didn't include the time stamp on the X-axis, since the Y-value always changed on x = 0. Therefore the line didn't show up as expected.  
+
+![web-server](https://github.com/thomasnguy3n/ADA525/assets/142970936/01d7bdf6-0588-4ee6-9d10-21c37f73c64b){: style="display: block; margin: 0 auto; width: 3000px; height: 150px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 50px;">
+  <p>Screenshot of the updating chart</p>
+</div>
+
+***Next***
+
+I wanted to learn more about the p5JS and how I could implement this library into the code that I've already written. 
