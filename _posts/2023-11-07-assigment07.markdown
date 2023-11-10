@@ -9,7 +9,7 @@ author: "TN"
 
 When I initially began this project, I started by reading the documentation for the various packages I was planning to use. This included ExpressJS and ChartJS. Although I had previous experience with other frameworks like ReactJS and Django, I had no prior experience with NodeJS. I saw this as a fresh opportunity to learn and become familiar with a new framework.
 
-At first, I wanted to use real-time data that was constantly updated, but I realized that it was more complex than the initial task required. I quickly understood that I would have to work with APIs and other components, which were too complicated for the assignment. Therefore, I decided to use a random number generator that would produce a new number every 5 seconds.
+At first, I wanted to use real-time data that was constantly updated, but I realized that it was more complex than the initial task required. I quickly understood that I would have to work with APIs and other components, which were too complicated for the assignment. Therefore, I decided to use a random number generator that would produce a new number every different seconds.
 
 ***Project Steps***
 
