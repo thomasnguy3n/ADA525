@@ -131,10 +131,96 @@ The end result is a web server with a chart that updates every 5 seconds. The Y-
 
 The thought process behind the design is quite simple. I wanted a plain and minimalistic design with no drastic colors. Therefore I went with the colors blue and grey. I could have extended the Y-axis into something more or less than a 100, but since I had the Math.function() in between 0 and 100, I needed the Y-axis to be at least 100.
 
-I could have chosen another chart instead of the line-chart, for instance a bar chart, but I went with the simple and basic one, mainly because of time constraint and more focus on the final project.
-
 ***Next***
 
-I can implement this technology into my final project by creating a web server that shows a chart of the movements of the fan. With this, I can analyze the data coming from the Arduino, but also for the aesthetics.
+I wanted to implement new ChartJS functions that allow for chart animations. After reading the [documentation](https://www.chartjs.org/docs/latest/configuration/animations.html), I incorporated the new features into the code.
 
-I will see what I will come up with for the next assignment.
+{% raw %}```Javascript
+// client.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ctx = document.getElementById('data-chart').getContext('2d');
+    const dataPoints = [];
+
+    const config = {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Assignment 07: Web Server 1 - Real-time Data',
+                data: dataPoints,
+                borderColor: 'blue',
+                borderWidth: 2,
+                fill: false,
+            }],
+        },
+        options: {
+            animation: {
+                duration: 2000,
+                easing: 'linear',
+            },
+            scales: {
+                y: {
+                    min: 0,
+                    max: 100,
+                },
+            },
+        },
+    };
+
+    const chart = new Chart(ctx, config);
+
+    function fetchLiveData() {
+        return Math.floor(Math.random() * 100) + 1;
+    }
+
+    setInterval(() => {
+        const newDataPoint = fetchLiveData();
+        dataPoints.push(newDataPoint);
+
+        // Update the chart
+        chart.data.labels.push(new Date().toLocaleTimeString());
+        chart.data.datasets[0].data = dataPoints;
+        chart.update();
+    }, 2000);
+});
+```{% endraw %}
+
+{% raw %}```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Data Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="data-chart" width="800" height="300"></canvas>
+
+    <script src="client.js"></script>
+</body>
+</html>
+```{% endraw %}
+
+I also changed the size of the chart into a readable one, whereas earlier it was too small because I didn't set the width and height of the chart.
+
+![web-server-v2](https://github.com/thomasnguy3n/ADA525/assets/142970936/7ed9b630-d639-4c49-bd30-7c5ccfed6728){: style="display: block; margin: 0 auto; width: 700px; height: 500px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 50px;">
+  <p>Screenshot of the updating chart - V2</p>
+</div>
+
+Now I wanted to see how this would look like in a bar-chart. I just did a minor adjustment in the *client.js*-file where I wrote '*bar*' instead of '*line*'.
+
+![web-server-v3](https://github.com/thomasnguy3n/ADA525/assets/142970936/083edccf-880f-4fef-9974-44d3400f4a2c){: style="display: block; margin: 0 auto; width: 700px; height: 500px;"}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 50px;">
+  <p>Screenshot of the updating bar-chart - V3</p>
+</div>
+
+***After-thoughts***
+
+I plan to integrate this technology into my final project by creating a web server that displays a chart illustrating the fan's movements. This not only allows me to analyze data from the Arduino but also enhances the project aesthetically.
+
+While P5JS appears to be a cool library with awesome features, due to time constraints, I had to prioritize the completion of the final project over exploring P5JS.
