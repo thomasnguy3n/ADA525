@@ -126,7 +126,7 @@ The end result is a web server with a chart that updates every 5 seconds. The Y-
 ![web-server](https://github.com/thomasnguy3n/ADA525/assets/142970936/01d7bdf6-0588-4ee6-9d10-21c37f73c64b){: style="display: block; margin: 0 auto; width: 3000px; height: 150px;"}
 
 <div style="display: flex; justify-content: center; align-items: center; height: 50px;">
-  <p>Screenshot of the updating chart</p>
+  <p>Screenshot of the updating chart - V1</p>
 </div>
 
 The thought process behind the design is quite simple. I wanted a plain and minimalistic design with no drastic colors. Therefore I went with the colors blue and grey. I could have extended the Y-axis into something more or less than a 100, but since I had the Math.function() in between 0 and 100, I needed the Y-axis to be at least 100.
