@@ -1,8 +1,15 @@
 ---
 layout: post
-title: "C++ // Arduino code"
+title: "C++ // Arduino code - Final Project"
 date:   2023-11-07 10:33:30 +0200
 author: "TN"
+
+***Code version 1***
+
+Code works fine. The fan blows for 5 seconds, then shuts off for 1 second. Whenever I take the USB cable off from the computer, the fan shuts off. I need to find a way to make the fan, battery and Arduino independent from the computer.
+
+I need to explore further with voltage and ampere, and how much the fan can handle.
+
 ---
 {% raw %}```C++
 #include <Arduino.h>
@@ -19,11 +26,15 @@ void setup() {
 
 void loop() {
   // Set the fan speed using PWM
-  analogWrite(mosfetPin, 128); // Adjust the PWM value (0-255) to control the fan speed
+  analogWrite(mosfetPin, 200); // Adjust the PWM value (0-255) to control the fan speed
   delay(5000); // Run at this speed for 5 seconds
 
   // Turn off the fan
   analogWrite(mosfetPin, 0);
-  delay(5000); // Wait for 5 seconds before repeating
+  delay(1000); // Wait for 5 seconds before repeating
 }
 ```{% endraw %}
+
+***Code version 2***
+
+Find ways to include gyro into the code where the PWM will activate whenever the arduino/gyro moves.
