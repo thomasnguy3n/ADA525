@@ -13,10 +13,9 @@ author: "TN"
 #include <SPI.h>
  #include <Adafruit_TinyUSB.h>
 // Define the pin connected to the MOSFET gate
-const int mosfetPin = 6; // Change this to the actual pin you are using
+const int mosfetPin = 6; 
 
 void setup() {
-  // Set the MOSFET pin as an OUTPUT
   pinMode(mosfetPin, OUTPUT);
 }
 
@@ -45,7 +44,7 @@ I plan to go deeper into understanding voltage and amperage, determining the fan
 #include <Arduino_LSM6DS3.h>
 
 // Define the pin connected to the MOSFET gate
-const int mosfetPin = 6; // Change this to the actual pin you are using
+const int mosfetPin = 6; 
 
 void setup() {
   Serial.begin(9600);
