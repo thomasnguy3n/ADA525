@@ -71,9 +71,9 @@ void loop() {
   // Print accelerometer data for debugging
   Serial.println("Acceleration Magnitude: " + String(accelMagnitude));
 
-  if (accelMagnitude > 1.5) { // Adjust the threshold based on your sensor and setup
+  if (accelMagnitude > 1.5) { // Adjust the threshold
     // Motion detected, turn on the fan
-    analogWrite(mosfetPin, 200); // Adjust the PWM value (0-255) to control the fan speed
+    analogWrite(mosfetPin, 200); //  control the fan speed
     delay(10000); // Run at this speed for 10 seconds
   } else {
     // No motion, turn off the fan
