@@ -3,10 +3,10 @@ layout: post
 title: "C++ // Arduino code - Final Project"
 date:   2023-11-07 10:33:30 +0200
 author: "TN"
+---
 
 ***Code version 1***
 
----
 {% raw %}```C++
 #include <Arduino.h>
 #include <Adafruit_I2CDevice.h>
