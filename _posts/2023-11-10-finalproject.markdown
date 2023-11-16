@@ -89,4 +89,81 @@ The code works perfectly fine. I may need to adjust the accelMagnitude, which is
 
 ***Code version 3***
 
+{% raw %}```C++
+#include <Arduino.h>
+#include <Adafruit_I2CDevice.h>
+#include <SPI.h>
+#include <Adafruit_TinyUSB.h>
+#include <Arduino_LSM6DS3.h>
+#include <Arduino_LSM6DS3.h>
+
+void fanLogic();
+
+
+
+const int mosfetPin = 6; 
+
+void setup() {
+  Serial.begin(9600);
+
+ 
+  pinMode(mosfetPin, OUTPUT);
+
+ 
+  if (!IMU.begin()) {
+    Serial.println("Failed to initialize LSM6DS3!");
+    while (1);
+  }
+}
+
+void loop() {
+  float x, y, z;
+  
+  // Read gyro data
+  IMU.readAcceleration(x, y, z);
+
+  // Calculate the magnitude of acceleration
+  float accelMagnitude = sqrt(x * x + y * y + z * z);
+
+  // Print accelerometer data for debugging
+  Serial.println("Acceleration Magnitude: " + String(accelMagnitude));
+
+  if (accelMagnitude > 1.5) { 
+    // Motion detected, run the fan logic
+    fanLogic();
+  } else {
+    // No motion, turn off the fan
+    analogWrite(mosfetPin, 0);
+  }
+
+  delay(1000); // Adjust the delay as needed
+}
+
+void fanLogic() {
+  // Run the fan at a certain PWM value for 10 seconds
+  analogWrite(mosfetPin, 200); // Adjust the PWM value (0-255) 
+  delay(10000); // Run at this speed for 10 seconds
+
+  // Turn off the fan for 1 second every 3 seconds within the 10-second period
+  for (int i = 0; i < 10; i++) {
+    analogWrite(mosfetPin, 0); // Turn off the fan
+    delay(1000); // Off for 1 second
+    analogWrite(mosfetPin, 200); // Turn on the fan
+    delay(2000); // On for 2 seconds
+  }
+
+  // Turn off the fan at the end of the 10-second period
+  analogWrite(mosfetPin, 0);
+}
+
+```{% endraw %}
+
+***Code version 4***
+
 Still working on it.
+
+***References***
+
+
+
+https://www.youtube.com/watch?v=Pw1kSS_FIKk&ab_channel=nenioc187
