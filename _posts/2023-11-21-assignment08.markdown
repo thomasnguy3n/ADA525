@@ -46,3 +46,69 @@ void loop() {
   delay(1000); // Sends data every second
 }
 ```{% endraw %}
+
+After finishing the code for the Arduino, I began working on the web server and how it would interact with the data waiting in COM3 (serial port 3).
+
+I used NodeJS with frameworks, libraries, and packages like Express to build the static web server, Socket.IO for communication between the client and the server, and serialport for receiving the data from the Arduino. ChartJS was also used for visualization.
+
+The most crucial part of the coding in NodeJS was sorting and 'cleaning' the incoming data.
+
+{% raw %}```Javascript
+const express = require("express");
+const app = express();
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
+const { SerialPort } = require("serialport");
+
+const port = 3000;
+
+let x_val = 0;
+let y_val = 0;
+let z_val = 0;
+let output = "";
+let current = "";
+
+const serialPort = new SerialPort({
+    path: "COM3",
+    baudRate: 9600,
+  });
+
+
+serialPort.on("data", function (data) {
+  output += data.toString();
+  if (data.toString().includes("\n")) {
+    current = output.split("\n")[0];
+    const values = current.split(",");
+    if (values.length >= 3) {
+      x_val = parseFloat(values[0]);
+      y_val = parseFloat(values[1]);
+      z_val = parseFloat(values[2]);
+    }
+    output = output.split("\n")[1];
+  }
+});
+
+app.use(express.static("public"));
+
+app.get("/getData", (req, res) => {
+  res.send({ x_val: x_val, y_val: y_val, z_val: z_val });
+});
+
+io.on("connection", (socket) => {
+  console.log("a user connected");
+  socket.on("disconnect", () => {
+    console.log("user disconnected");
+  });
+});
+
+http.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+```{% endraw %}
+
+***Result***
+
+
+
+
+***What now***
