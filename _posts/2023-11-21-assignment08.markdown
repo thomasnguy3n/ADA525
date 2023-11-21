@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Assignment 07: Web Server 2"
+title: "Assignment 08: Web Server 2 - Web interfaces, Thing -> Server -> Client"
 date:   2023-11-21 10:33:30 +0200
 author: "TN"
 ---
