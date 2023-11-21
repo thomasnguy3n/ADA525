@@ -4,3 +4,45 @@ title: "Assignment 08: Web interfaces, Thing -> Server -> Client"
 date:   2023-11-21 10:33:30 +0200
 author: "TN"
 ---
+
+***Introduction***
+
+This assignment is based on obtaining data from the sensors connected to the Arduino and then plotting it using a visualization tool on a web server. With this in mind, I will use the data gathered from the accelerometer sensor and plot it on a chart using NodeJS and ChartJS.
+
+***Project Steps***
+
+I started off by testing the accelerometer sensor in the Arduino, where I would print out the different data gathered from the X, Y, and Z axes.
+
+After testing the sensor and confirming that the Arduino could print out the data gathered from the accelerometer, I began modifying the C++ code to send the data to the serial port.
+
+{% raw %}```C++
+#include <Arduino.h>
+#include <Adafruit_BMP280.h>
+#include <Wire.h>
+#include <Arduino_LSM6DS3.h>
+
+void setup() {
+  Serial.begin(9600);    // For serial monitor
+  Serial1.begin(9600);   // For serial port
+
+  if (!IMU.begin()) {
+    Serial.println("Failed to initialize LSM6DS3!");
+    while (1);
+  }
+}
+
+void loop() {
+  float x, y, z;
+
+  // Read accelerometer data
+  IMU.readAcceleration(x, y, z);
+
+  Serial.print(x);
+  Serial.print(",");
+  Serial.print(y);
+  Serial.print(",");
+  Serial.println(z);
+
+  delay(1000); // Sends data every second
+}
+```{% endraw %}
