@@ -216,7 +216,7 @@ Now I wanted to see how this would look like in a bar-chart. I just did a minor 
 ![ezgif com-video-to-gif (1)](https://github.com/thomasnguy3n/ADA525/assets/142970936/49567a18-b457-418a-8e9d-50fc962359e0){: style="display: block; margin: 0 auto; width: 700px; height: 400px;"}
 
 <div style="display: flex; justify-content: center; align-items: center; height: 50px;">
-  <p>Screenvideo of the updating bar-chart - V3</p>
+  <p>Screenvideo  of the updating bar-chart - V3</p>
 </div>
 
 ***After-thoughts***
