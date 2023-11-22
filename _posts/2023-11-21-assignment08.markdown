@@ -124,5 +124,6 @@ http.listen(port, () => {
 
 To be honest, I'm not really satisfied with the result. For future work and the final project, I will explore other charts or visual methods to display the data, as it seems not practical and intuitive.
 
-I was inspired by Daniel's approach to this assignment, and I plan to implement something similar in my final project where it will display the fan, and rotate or move in the web server as it does in real-life.
+I was inspired by Daniel's approach to this assignment, and I plan to implement something similar in my final project where it will display the fan, and rotate or move in the web server as it does in real-life. Not only that, but a timer that would display the remaining blow time of the fan would be interesting to have. This will notify the user when the fan is about to 'die' out and when to shake it to make it blow longer.
 
+A setting function for the web server would also be interesting to have. I think at times it would be more pleasant to have the fan blow infinitely, and not only when you interact with it. I will do further research for that and Bluetooth connection.
