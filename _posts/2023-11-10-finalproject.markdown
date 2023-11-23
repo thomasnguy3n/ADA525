@@ -376,9 +376,8 @@ void fanLogic() {
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="myButton" style="position: absolute; top: 5px; left: 5px;">10 sec Blow</button>
-    <button id="myButton" style="position: absolute; top: 50px; left: 5px;">20 sec Blow</button>
-    <button id="myButton" style="position: absolute; top: 95px; left: 5px;">30 sec Blow</button>
+    <button id="tenSecButton" style="position: absolute; top: 5px; left: 5px;">10 sec Blow</button>
+  <button id="twentySecButton" style="position: absolute; top: 50px; left: 5px;">20 sec Blow</button>
     <h2>ADA525 - Rapid Prototyping using Computional Tools</h2>
     <h1>Interactive Fan</h1>
   <h2>Remaining Blow Time: <span id="remainingTime"></span> seconds</h2>
@@ -401,14 +400,52 @@ body {
     text-align: center;
   }
 
-  #myButton {
-    background-color: #007bff;
+  #tenSecButton {
+    background-color: #9c9d9e;
     color: white;
     padding: 10px 15px;
     border: rgb(35, 34, 34);
     border-radius: 5px;
     cursor: pointer;
     font-family: Calibri, sans-serif;
+  }
+
+  #twentySecButton {
+    background-color: #9c9d9e;
+    color: white;
+    padding: 10px 15px;
+    border: rgb(35, 34, 34);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Calibri, sans-serif;
+  }
+
+  #tenSecButton:hover {
+    background-color: #666;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #twentySecButton:hover {
+    background-color: #666;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  #tenSecButton.active {
+    background-color: #0d9e4f;
+  }
+
+  #tenSecButton.active:hover {
+    background-color: #666;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #twentySecButton.active {
+    background-color: #0d9e4f;
+  }
+
+  #twentySecButton.active:hover {
+    background-color: #666;
+    transition: background-color 0.3s ease-in-out;
   }
 ```{% endraw %}
 
@@ -460,7 +497,6 @@ app.use(express.static('public'));
 server.listen(port, () => {
   console.log('Server started on port ' + port);
 });
-
 ```{% endraw %}
 
 ***References***
