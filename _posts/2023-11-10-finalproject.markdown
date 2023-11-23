@@ -235,6 +235,71 @@ void fanLogic() {
 
 ```{% endraw %}
 
+***Code version 5***
+
+{% raw %}```C++
+#include <Arduino.h>
+#include <Adafruit_I2CDevice.h>
+#include <SPI.h>
+#include <Adafruit_TinyUSB.h>
+#include <Arduino_LSM6DS3.h>
+
+void fanLogic();
+
+const int mosfetPin = 6;
+unsigned long fanStartTime = 0;
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(mosfetPin, OUTPUT);
+
+  if (!IMU.begin()) {
+    Serial.println("Failed to initialize LSM6DS3!");
+    while (1);
+  }
+}
+
+void loop() {
+  float x, y, z;
+
+  // Read gyro data
+  IMU.readAcceleration(x, y, z);
+
+  // Calculate the magnitude of acceleration
+  float accelMagnitude = sqrt(x * x + y * y + z * z);
+
+  // Print accelerometer data for debugging
+  Serial.println("Acceleration Magnitude: " + String(accelMagnitude));
+
+  if (accelMagnitude > 1.5) {
+    // Motion detected, run the fan logic
+    fanLogic();
+  } else {
+    // No motion, turn off the fan
+    analogWrite(mosfetPin, 0);
+  }
+
+  delay(1000); // Adjust the delay as needed
+}
+
+void fanLogic() {
+  // Run the fan at a certain PWM value for 10 seconds
+  analogWrite(mosfetPin, 200); // Adjust the PWM value (0-255)
+  fanStartTime = millis(); // Record the start time
+
+  while (millis() - fanStartTime < 10000) {
+    // Send the remaining blow time over the serial port
+    Serial.print("Remaining Blow Time: ");
+    Serial.println(10 - (millis() - fanStartTime) / 1000);
+    delay(1000); // Update every second
+  }
+
+  // Turn off the fan at the end of the 10-second period
+  analogWrite(mosfetPin, 0);
+}
+```{% endraw %}
+
 ***References***
 
 
