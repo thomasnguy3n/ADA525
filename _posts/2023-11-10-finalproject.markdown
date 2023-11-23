@@ -300,6 +300,169 @@ void fanLogic() {
 }
 ```{% endraw %}
 
+***Code version 6***
+
+{% raw %}```C++
+#include <Arduino.h>
+#include <Adafruit_I2CDevice.h>
+#include <SPI.h>
+#include <Adafruit_TinyUSB.h>
+#include <Arduino_LSM6DS3.h>
+
+void fanLogic();
+
+const int mosfetPin = 6;
+unsigned long fanStartTime = 0;
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(mosfetPin, OUTPUT);
+
+  if (!IMU.begin()) {
+    Serial.println("Failed to initialize LSM6DS3!");
+    while (1);
+  }
+}
+
+void loop() {
+  float x, y, z;
+
+  // Read gyro data
+  IMU.readAcceleration(x, y, z);
+
+  // Calculate the magnitude of acceleration
+  float accelMagnitude = sqrt(x * x + y * y + z * z);
+
+  // Print accelerometer data for debugging
+ // Serial.println("Acceleration Magnitude: " + String(accelMagnitude));
+
+  if (accelMagnitude > 1.5) {
+    // Motion detected, run the fan logic
+    fanLogic();
+  } else {
+    // No motion, turn off the fan
+    analogWrite(mosfetPin, 0);
+    Serial.println(0);
+  }
+
+  delay(1000); // Adjust the delay as needed
+}
+
+void fanLogic() {
+  // Run the fan at a certain PWM value for 10 seconds
+  analogWrite(mosfetPin, 200); // Adjust the PWM value (0-255)
+  fanStartTime = millis(); // Record the start time
+
+  while (millis() - fanStartTime < 10000) {
+    // Send the remaining blow time over the serial port
+  //  Serial.print("Remaining Blow Time: ");
+    Serial.println(10 - (millis() - fanStartTime) / 1000);
+    delay(1000); // Update every second
+  }
+
+  // Turn off the fan at the end of the 10-second period
+  analogWrite(mosfetPin, 0);
+}
+```{% endraw %}
+
+{% raw %}```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Blow Time Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="myButton" style="position: absolute; top: 5px; left: 5px;">10 sec Blow</button>
+    <button id="myButton" style="position: absolute; top: 50px; left: 5px;">20 sec Blow</button>
+    <button id="myButton" style="position: absolute; top: 95px; left: 5px;">30 sec Blow</button>
+    <h2>ADA525 - Rapid Prototyping using Computional Tools</h2>
+    <h1>Interactive Fan</h1>
+  <h2>Remaining Blow Time: <span id="remainingTime"></span> seconds</h2>
+    <a>Give that fan a shake, and watch it unleash a breeze of awesomeness!</a>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.on('timeUpdate', (remainingTime) => {
+      document.getElementById('remainingTime').textContent = remainingTime;
+    });
+  </script>
+</body>
+</html>
+```{% endraw %}
+
+{% raw %}```CSS
+body {
+    font-family: Calibri, sans-serif;
+    text-align: center;
+  }
+
+  #myButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: rgb(35, 34, 34);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Calibri, sans-serif;
+  }
+```{% endraw %}
+
+{% raw %}```Javascript
+const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
+const io = require('socket.io')(server);
+const { SerialPort } = require("serialport");
+
+const port = 3000;
+
+// Open the serial port connection
+const serialPort = new SerialPort({
+  path: "COM7",
+  baudRate: 9600,
+});
+
+// Create an array to store the remaining blow time values
+const remainingTimes = [];
+
+// Listen for incoming data from the Arduino
+serialPort.on('data', (data) => {
+  const remainingTime = parseInt(data.toString());
+
+  // Check if the received data is 0
+  if (remainingTime === 0) {
+    // Fan is not blowing, display 0 as the remaining time
+    io.emit('timeUpdate', 0);
+  } else {
+    // Push the remaining time value into the array
+    remainingTimes.push(remainingTime);
+
+    // Emit the latest remaining time to connected clients
+    io.emit('timeUpdate', remainingTimes[remainingTimes.length - 1]);
+  }
+});
+
+// Handle errors if any occur
+serialPort.on('error', (error) => {
+  console.error('Error:', error);
+});
+
+// Serve the static HTML file
+app.use(express.static('public'));
+
+// Start the Express server
+server.listen(port, () => {
+  console.log('Server started on port ' + port);
+});
+
+```{% endraw %}
+
 ***References***
 
 
