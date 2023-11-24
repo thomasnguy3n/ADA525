@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ // Arduino code - Final Project"
+title: "Codes - Final Project"
 date:   2023-11-23 10:33:30 +0200
 author: "TN"
 ---
