@@ -110,6 +110,15 @@ void fanLogic() {
   <button id="sixtySecButton">60 sec Blow</button>
   <br>
   <br>
+  <br>
+  <br>
+  <div class="slidecontainer">
+    <p>Embrace the might of your fan – select your power level!</p>
+    <p>Not functional - working on it!</p>
+    <input type="range" class="slider" id="fanSpeedSlider" min="1" max="255" value="255">
+    <br>
+    <span id="fanSpeedPercentage"></span>
+  </div>
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io();
@@ -179,6 +188,26 @@ void fanLogic() {
     fanElement.addEventListener('animationend', () => {
       fanElement.style.animationPlayState = 'paused';
     });
+
+    const fanSpeedSlider = document.getElementById('fanSpeedSlider');
+    const fanSpeedPercentageElement = document.getElementById('fanSpeedPercentage');
+
+    // Update the fan speed percentage whenever the slider value changes
+    fanSpeedSlider.addEventListener('input', () => {
+      const fanSpeedValue = fanSpeedSlider.value;
+      const fanSpeedPercentage = (fanSpeedValue / 255) * 100;
+
+      // Round the fan speed percentage to two decimal places
+      const formattedFanSpeedPercentage = fanSpeedPercentage.toFixed(2);
+
+      // Update the fan speed percentage element's content
+      fanSpeedPercentageElement.textContent = `${formattedFanSpeedPercentage}%`;
+    });
+
+    // Initialize the fan speed percentage with the initial slider value
+    const initialFanSpeedValue = fanSpeedSlider.value;
+    const initialFanSpeedPercentage = (initialFanSpeedValue / 255) * 100;
+    fanSpeedPercentageElement.textContent = `${initialFanSpeedPercentage}%`;
   </script>
 </body>
 </html>
